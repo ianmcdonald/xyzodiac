@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="114px" height="115px" viewBox="0 0 114 115" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0.5" y="0.9765625" width="113" height="113"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="113" height="113" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Detail" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop" transform="translate(-455.000000, -115.000000)">
+            <g id="Group" transform="translate(455.000000, 115.102531)">
+                <use id="Rectangle-2" stroke="#000000" mask="url(#mask-2)" stroke-width="2" xlink:href="#path-1"></use>
+                <path d="M1.37890625,1.96875 L112.742188,113.636719" id="Path-2" stroke="#979797"></path>
+                <path d="M113.527344,0.75390625 L2.2109375,111.8125" id="Path-3" stroke="#979797"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,10 @@
+<% include ./partials/header.ejs %>
+
+<ul>
+  <% for (let i = 0; i < signs.length; i++) { %>
+    <li><a href="/sign/<%= signs[i].name.toLowerCase() %>"><%= signs[i].name %></a></li>
+  <% } %>
+</ul>
+
+<% include ./partials/footer.ejs %>
+  

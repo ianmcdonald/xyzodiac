@@ -1,0 +1,29 @@
+<% include ./partials/header.ejs %>
+
+<section>
+  
+  <img src="/public/dist/img/<%= sign.name.toLowerCase() %>.svg" alt="<%= sign.name %> - XYZODIAC" class="top-img">
+  <h1><%= sign.name %></h1>
+  <div class="dates"><%= sign.startDate %> &mdash; <%= sign.endDate %></div>
+
+  <ul class="sign-stacked-list">
+    <li>Element<br><span><%= sign.element %></span></li>
+    <li>Quality<br><span><%= sign.quality %></span></li>
+    <li>Planet<br><span><%= sign.planet %></span></li>
+  </ul>
+
+  <h2>Overview</h2>
+  <p><%= sign.description %></p>
+
+  <h2>Compatible</h2>
+
+  <ul class="compatible">
+    <% for (let i = 0; i < sign.compatible.length; i++) { %> 
+      <li><a href="/sign/<%= sign.compatible[i].toLowerCase() %>"><img src="/public/dist/img/<%= sign.compatible[i].toLowerCase() %>.svg" alt="<%= sign.compatible[i] %>"></a></li>
+    <% } %>
+  </ul>
+  
+</section>
+
+<% include ./partials/footer.ejs %>
+  

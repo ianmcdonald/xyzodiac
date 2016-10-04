@@ -4,9 +4,10 @@ const app    = require('koa')(),
       signs  = require('./data.js');
 
 const Routes = {
-
+  
   // API
-  api:  function *(next) {
+  api: function *(next) {
+    // Check if any parameters were passed
     if (this.request.querystring !== '') {
       let jsonResponse = [],
           q = this.query;
@@ -24,28 +25,28 @@ const Routes = {
     } else {
       this.body = yield render(
         'api', {
-          title: 'XYZODIAC'
+          title: 'XYZodiac API'
         }
       );
     }
   },
 
-  query:  function *(next) {
+  query: function *(next) {
     let request = this.request;
     let query = request.querystring;
     console.log(query);
     this.body = yield render(
       'index', {
-        title: 'XYZODIAC'
+        title: 'XYZodiac'
       }
     );
   },
   
   // Index
-  home:  function *(next) {
+  home: function *(next) {
     this.body = yield render(
       'index', {
-        title: 'XYZODIAC'
+        title: 'XYZodiac'
       }
     );
   },
@@ -56,7 +57,7 @@ const Routes = {
     this.body = yield render(
       'signs', {
         signs: signs,
-        title: `Signs ★ XYZODIAC`
+        title: `Signs | XYZodiac`
       });
   },
 
@@ -72,7 +73,7 @@ const Routes = {
     this.body = yield render(
       'sign', {
         sign: sign,
-        title: `${sign.name} ★ XYZODIAC`
+        title: `${sign.name} | XYZodiac`
       });
   },
 

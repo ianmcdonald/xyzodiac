@@ -2,26 +2,26 @@
 
 <section>
   
-  <img src="/public/dist/img/<%= sign.name.toLowerCase() %>.svg" alt="<%= sign.name %> - XYZODIAC" class="top-img">
+  <!-- <img src="/public/dist/img/<%= sign.name.toLowerCase() %>.svg" alt="<%= sign.name %> - XYZODIAC" class="top-img"> -->
   <h1><%= sign.name %></h1>
-  <div class="dates"><%= sign.startDate %> &mdash; <%= sign.endDate %></div>
+  <div class="dates"><%= sign.startDate.month %> <%= sign.startDate.day %>&mdash;<%= sign.endDate.month %> <%= sign.endDate.day %></div>
+  
+  <h2>The <%= sign.symbol %></h2>
+  <p><%= sign.description %></p>
 
   <ul class="sign-stacked-list">
     <li>Element<br><span><%= sign.element %></span></li>
     <li>Quality<br><span><%= sign.quality %></span></li>
-    <li>Planet<br><span><%= sign.planet %></span></li>
+    <li>Ruler<br><span><%= sign.ruler %></span></li>
   </ul>
 
-  <h2>Overview</h2>
-  <p><%= sign.description %></p>
+  <h2>Strengths</h2>
+  <p><% for (let i = 0; i < sign.strengths.length; i++) { if (i === 0) { %><%= sign.strengths[i][0].toUpperCase() + sign.strengths[i].slice(1).toLowerCase() %><% } else { %><%= sign.strengths[i].toLowerCase() %><% } %><% if (i < sign.strengths.length - 1) { %>, <% } else { %>.<% }} %></p>
 
-  <h2>Compatible</h2>
+  <h2>Weaknesses</h2>
+  <p><% for (let i = 0; i < sign.weaknesses.length; i++) { if (i === 0) { %><%= sign.weaknesses[i][0].toUpperCase() + sign.weaknesses[i].slice(1).toLowerCase() %><% } else { %><%= sign.weaknesses[i].toLowerCase() %><% } %><% if (i < sign.weaknesses.length - 1) { %>, <% } else { %>.<% }} %></p>
 
-  <ul class="compatible">
-    <% for (let i = 0; i < sign.compatible.length; i++) { %> 
-      <li><a href="/sign/<%= sign.compatible[i].toLowerCase() %>"><img src="/public/dist/img/<%= sign.compatible[i].toLowerCase() %>.svg" alt="<%= sign.compatible[i] %>"></a></li>
-    <% } %>
-  </ul>
+  
   
 </section>
 

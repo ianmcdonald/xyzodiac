@@ -34,6 +34,9 @@ body {
   padding: 0 1em;
   font-weight: 400;
 }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
 img {
   max-width: 100%;
   height: auto;
@@ -112,10 +115,6 @@ a:focus {
 a:active {
   outline: none;
 }
-iframe,
-video {
-  border: none;
-}
 header {
   position: fixed;
   width: 100%;
@@ -138,6 +137,7 @@ pre {
   margin: 4em 0;
 }
 table {
+  border-spacing: 0;
   display: table;
   border-collapse: collapse;
   width: 100%;
@@ -178,9 +178,6 @@ footer nav ul {
   margin: 0;
   list-style-type: none;
 }
-
-/* Helpers
------------------------------------------------------------------------------ */
 .text-center {
   display: block;
   text-align: center;
@@ -243,7 +240,6 @@ footer nav ul {
 .top-img {
   display: block;
   margin: 4em 0;
-//  text-align: center;
 }
 .sign-stacked-list {
   list-style-type: none;
@@ -328,19 +324,6 @@ footer nav ul {
   stroke-width: 6;
   stroke-miterlimit: 10;
 }
-
-/* Inputs
------------------------------------------------------------------------------ */
-input {
-  border: none;
-  outline: none;
-  height: 2.5em;
-  vertical-align: middle;
-  width: 100%;
-}
-
-/* Buttons
------------------------------------------------------------------------------ */
 .btn {
   display: inline-block;
   border: 1px dashed $accent;
@@ -356,9 +339,6 @@ input {
   background-color: $accent;
   color: white;
 }
-
-/* Home Image
------------------------------------------------------------------------------ */
 .home-big-img {
   position: absolute;
   top: 0;
@@ -389,33 +369,3 @@ input {
 .astro-wheel a {
   text-decoration: none;
 }
-/*
-.astro-wheel #Outer-ring,
-.astro-wheel a text,
-.astro-wheel a circle,
-.astro-wheel #Lines path,
-.astro-wheel #Inner-ring1,
-.astro-wheel #Inner-ring2 {
-  transition: all 1s ease;
-}
-.astro-wheel:hover {
-  #Outer-ring {
-    fill: $body;
-  }
-  #Inner-ring1 {
-    fill: $body;
-  }
-  #Inner-ring2 {
-    fill: $bg;
-  }
-  #Lines path {
-    stroke: $bg;
-  }
-  a text {
-    fill: $bg;
-  }
-  a circle {
-    fill: $body;
-  }
-}
-*/

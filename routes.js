@@ -7,8 +7,16 @@ const Routes = {
   
   // API
   api: function *(next) {
+    console.log(this.request);
+    this.accepts('json', 'text');
     // Check if any parameters were passed
     if (this.request.querystring !== '') {
+
+      this.set('Access-Control-Allow-Origin', '*');
+      this.set('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+      this.set('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+      this.set('Access-Control-Allow-Credentials', true);
+      
       let jsonResponse = [],
           q = this.query;
       function buildResponse(x) {
@@ -20,8 +28,10 @@ const Routes = {
         if (q.quality && q.quality.toLowerCase() === x.quality.toLowerCase()) buildResponse(x);
         if (q.planet  && q.planet.toLowerCase()  === x.planet.toLowerCase())  buildResponse(x);
       });
-      this.type = 'json';
-      this.body = jsonResponse;
+      // this.type = 'application/json';
+      // this.status = 200;
+      this.body = JSON.stringify(jsonResponse);
+      console.log(this.response);
     } else {
       this.body = yield render(
         'api', {

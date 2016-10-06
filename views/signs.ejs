@@ -1,8 +1,12 @@
 <% include ./partials/header.ejs %>
 <section>
-  <ul>
+  <div class="invert">
+    <p>XYZodiac is an astrological reference and public API.</p>
+  </div>
+  <ul class="signs">
     <% for (let i = 0; i < signs.length; i++) { %>
-       <li><a href="/sign/<%= signs[i].name.toLowerCase() %>"><%= signs[i].name %></a></li>
+       <li><a href="/sign/<%= signs[i].name.toLowerCase() %>">           
+           <img src="/public/dist/img/<%= signs[i].name.toLowerCase() %>.svg" alt="<%= signs[i].name %>"><span><%= signs[i].name %></span></a></li>
        <% } %>
   </ul>
 </section>

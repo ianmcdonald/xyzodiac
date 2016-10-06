@@ -51,7 +51,7 @@ main {
   display: block; }
 
 section {
-  margin: 16em auto 0 auto;
+  margin: 10em auto 0 auto;
   max-width: 40em; }
 
 p {
@@ -299,19 +299,22 @@ footer nav ul {
 .home-api-btn {
   position: fixed;
   bottom: 1em;
-  right: 1em; }
+  right: 1em;
+  letter-spacing: 0.125em; }
 
 .home-find-myself-btn {
   position: fixed;
   bottom: 1em;
-  left: 1em; }
+  left: 1em;
+  letter-spacing: 0.125em; }
 
 .logo {
   display: block;
   width: 10em;
   max-width: 33.33%;
   margin: 1em auto;
-  border: none; }
+  border: none;
+  transition: all 0.66s ease; }
 
 .logo path,
 .logo polygon,
@@ -362,8 +365,80 @@ footer nav ul {
 
 .astro-wheel {
   transform-origin: center;
-  animation: rotater 60s infinite;
+  animation: rotater 120s infinite;
   animation-timing-function: linear; }
 
 .astro-wheel a {
   text-decoration: none; }
+
+.signs {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: flex-end;
+  justify-content: center; }
+
+.signs li {
+  padding: 1em;
+  min-width: 8em;
+  position: relative; }
+
+.signs li span {
+  display: block;
+  text-align: center;
+  padding: 0;
+  text-transform: uppercase;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(-33deg);
+  text-align: center;
+  width: 100%;
+  left: 0;
+  letter-spacing: 0.125em; }
+
+.signs li img {
+  max-height: 5em;
+  display: block;
+  margin: 0 auto; }
+
+.signs li a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 1em 0;
+  color: white;
+  min-height: 5em; }
+
+.signs li a:hover {
+  background: royalblue;
+  color: white; }
+
+.signs li a:hover span {
+  opacity: 1; }
+
+.signs li a:hover img {
+  opacity: 0; }
+
+.sign-img {
+  width: 33.33%;
+  max-width: 25em;
+  min-width: 10em;
+  position: fixed;
+  opacity: 0.05;
+  right: -1em;
+  top: 5em; }
+
+.invert {
+  color: white;
+  background-color: royalblue;
+  padding: 5em 1em;
+  margin-bottom: 4em;
+  text-align: center;
+  font-family: "Menlo", "Monaco", monospace; }
+
+.invert p {
+  margin-bottom: 0; }

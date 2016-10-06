@@ -1,3 +1,17 @@
-const copyright = document.querySelector('.copyright');
+function logoHider() {
+  let logo = document.querySelector('.logo');
 
-copyright.textContent = `${new Date().getFullYear()}`;
+  function checkYPos() {
+    if (window.pageYOffset > 70) {
+      logo.style.opacity = '0';
+      logo.style.marginTop = '-2em';
+    } else {
+      logo.style.opacity = '1';
+      logo.style.marginTop = '1em';
+    }
+  }
+
+  window.addEventListener('scroll', checkYPos);  
+}
+
+logoHider();

@@ -164,9 +164,10 @@ td:first-child {
 footer nav {
   position: relative;
   width: 25%;
-  left: 66.66%;
-  top: -2em;
-  transform: skew(10deg, -30deg);
+  min-width: 8em;
+  left: 50%;
+  top: -3.25em;
+  transform: skew(-10deg, -10deg);
   border: 4px solid;
   padding: 1em; }
 
@@ -223,13 +224,14 @@ footer nav ul {
   min-height: 35em; }
 
 .dates {
-  margin: 1em 0 6em 0;
+  display: inline-block;
+  margin: 1.25em 0 6em 0;
   text-transform: uppercase;
   font-weight: 400;
   color: royalblue;
   letter-spacing: 0.25em;
   font-size: 0.625em;
-  transform: skew(35deg, -3deg) scaleY(2.25); }
+  transform: skew(-10deg, -10deg) scaleY(2.25); }
   @media screen and (min-width: 25em) {
     .dates {
       font-size: 0.85em; } }

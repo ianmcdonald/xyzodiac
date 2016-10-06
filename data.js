@@ -304,7 +304,7 @@ const Signs = [
   {
     name: 'Capricorn',
     symbol: 'Sea-Goat',
-    element: 'Eath',
+    element: 'Earth',
     quality: 'Cardinal',
     ruler: 'Saturn',
     color: 'brown',

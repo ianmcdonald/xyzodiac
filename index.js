@@ -22,4 +22,3 @@ router.get('/api', routes.api);
 router.get('/sign/:sign', routes.signDetail);
 router.get('/sign', routes.redirectSign);
 router.get('/signs', routes.signs);
-

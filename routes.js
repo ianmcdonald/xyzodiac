@@ -26,7 +26,8 @@ const Routes = {
         if (q.name    && q.name.toLowerCase()    === x.name.toLowerCase())    buildResponse(x);
         if (q.element && q.element.toLowerCase() === x.element.toLowerCase()) buildResponse(x);
         if (q.quality && q.quality.toLowerCase() === x.quality.toLowerCase()) buildResponse(x);
-        if (q.planet  && q.planet.toLowerCase()  === x.planet.toLowerCase())  buildResponse(x);
+        if (q.ruler   && q.ruler.toLowerCase()   === x.ruler.toLowerCase())   buildResponse(x);
+        if (q.symbol  && q.symbol.toLowerCase()  === x.symbol.toLowerCase())  buildResponse(x);
       });
       // this.type = 'application/json';
       // this.status = 200;

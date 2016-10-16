@@ -59,7 +59,7 @@ section {
 }
 p {
   font-size: 1em;
-  margin: 0 0 2em 0;
+  margin: 0 0 1.25em 0;
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: $sans;
@@ -134,14 +134,18 @@ pre {
   background: $body;
   color: white;
   padding: 1.5em 1em;
-  margin: 4em 0;
+  margin: 0 0 2em 0;
+  overflow: auto;
+}
+code {
+  font-family: $mono;  
 }
 table {
   border-spacing: 0;
   display: table;
   border-collapse: collapse;
   width: 100%;
-  margin: 4em 0;
+  margin: 2em 0;
 }
 tr {
   border-bottom: 1px dashed $body;
